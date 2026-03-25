@@ -6,7 +6,7 @@ PY := $(VENV)/bin/python
 .PHONY: venv install run clean
 
 venv:
-	$(PYTHON) -m venv $(VENV)
+	@test -d $(VENV) || $(PYTHON) -m venv $(VENV)
 
 install: venv
 	$(PIP) install -U pip

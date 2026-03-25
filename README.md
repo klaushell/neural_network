@@ -4,19 +4,25 @@ A minimal feedforward neural network with one hidden layer, implemented in NumPy
 
 ## Setup
 
-Create a virtual environment and install dependencies:
+Pick **one** of the following (do **not** paste the word `or` into the terminal — that is only English “choose A or B”).
+
+**Option A — Makefile** (creates `.venv` if missing, then installs packages):
 
 ```bash
 make install
 ```
 
-Or manually:
+**Option B — manual** (same result, no `make`):
 
 ```bash
 python3 -m venv .venv
-source .venv/bin/activate   # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+.venv/bin/pip install -U pip
+.venv/bin/pip install -r requirements.txt
 ```
+
+On Windows, use `.venv\Scripts\pip` instead of `.venv/bin/pip`, or activate first: `.venv\Scripts\activate`.
+
+`requirements.txt` includes TensorFlow and Keras; the install is large and can take several minutes.
 
 ## Run
 
